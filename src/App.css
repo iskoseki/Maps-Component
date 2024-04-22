@@ -1,0 +1,33 @@
+#mapaContainer {
+}
+
+@media screen and (max-width: 560px) {
+  #mapaContainer {
+    background-color: white !important;
+    border-radius: 24px;
+  }
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* El z-index solo funciona en elementos posicionados */
+  z-index: 1000; /* Un número alto para asegurarte de que esté por encima de otros elementos */
+}
+.input-search-map {
+  width: 250px;
+}
+.input.search-map:focus {
+  outline: none;
+  border: 12px solid #ec0000;
+  box-shadow: 0 0 0 2px #ff0000;
+}
+@media screen and (max-width: 560px) {
+  .search-bar {
+    justify-content: end;
+  }
+  .input-search-map {
+    width: 100%;
+  }
+}

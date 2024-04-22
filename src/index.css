@@ -1,0 +1,761 @@
+@import url("https://unpkg.com/leaflet@1.9.3/dist/leaflet.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Open Sans";
+  line-height: 1.5;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8 !important;
+}
+#sedes-react-component .leaflet-container {
+  width: 100%;
+  height: 400px !important;
+  border-radius: 0px;
+}
+
+.map-container {
+  background-color: transparent !important;
+}
+@media screen and (max-width: 560px) {
+  #sedes-react-component .leaflet-container {
+    height: 300px !important;
+    border-radius: 8px;
+  }
+  .map-container {
+    background-color: #ffffff;
+  }
+}
+
+#sedes-react-component .flex::-webkit-scrollbar {
+  display: none;
+}
+#sedes-react-component .red-hat {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+#sedes-react-component .min-h-95 {
+  min-height: 92vh;
+}
+
+#sedes-react-component .min-h-100 {
+  min-height: 100vh;
+}
+
+#sedes-react-component .section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+#sedes-react-component a {
+  text-decoration: none;
+  color: #a6192e;
+}
+#sedes-react-component input {
+  background-color: transparent;
+}
+
+#sedes-react-component .logo-head {
+  max-height: 35px;
+}
+
+#sedes-react-component .nav-icono {
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
+
+#sedes-react-component .nav-icono-icon {
+  position: absolute;
+  left: 9px;
+  top: 9px;
+}
+
+#sedes-react-component .timeline-content {
+  width: 80%;
+}
+
+#sedes-react-component .br-12 {
+  border-radius: 12px !important;
+}
+
+#sedes-react-component .br-24 {
+  border-radius: 24px;
+}
+
+#sedes-react-component .br-24-top {
+  border-radius: 24px 24px 0px 0px;
+}
+
+#sedes-react-component .br-12-top {
+  border-radius: 12px 12px 0px 0px !important;
+}
+
+#sedes-react-component .img-novedad {
+  aspect-ratio: 4/3;
+  border-radius: 8px 8px 0px 0px;
+}
+
+#sedes-react-component .text-small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#sedes-react-component .text-small-dos {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+#sedes-react-component .text-normal {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+#sedes-react-component .text-normal-dos {
+  font-size: 28px;
+  line-height: 34px;
+}
+
+#sedes-react-component .text-pago {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+#sedes-react-component .text-big {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+#sedes-react-component .text-ultra-big {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+#sedes-react-component .bg-serv-01 {
+  background-color: #7a92c5bd;
+}
+
+#sedes-react-component .h-serv {
+  height: 30vh;
+}
+
+#sedes-react-component .text-serv {
+  position: absolute;
+  bottom: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+#sedes-react-component .titulo-serv {
+  position: absolute;
+  top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+#sedes-react-component .linea-punteada {
+  border-top: 2px dotted #dee4f0;
+  width: 68%;
+  position: absolute;
+  top: 20px;
+  left: 15%;
+}
+
+#sedes-react-component .linea-punteada-2 {
+  border-top: 2px dotted #dee4f0;
+  width: 34%;
+  position: absolute;
+}
+
+#sedes-react-component .linea-punteada-3 {
+  border-top: 2px dotted #dee4f0;
+  width: 50%;
+  position: absolute;
+}
+
+#sedes-react-component .linea-punteada-2-active {
+  border-top: 2px dotted #7a92c5;
+  width: 34%;
+  position: absolute;
+}
+
+#sedes-react-component .linea-izq {
+  top: 20px;
+  left: 15%;
+}
+
+#sedes-react-component .linea-der {
+  top: 20px;
+  right: 15%;
+}
+
+#sedes-react-component .linea-cent {
+  top: 20px;
+  right: 27%;
+}
+
+#sedes-react-component .pasos li {
+  width: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px;
+  background-color: transparent;
+}
+
+#sedes-react-component ul li .numero {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #dee4f0;
+}
+
+#sedes-react-component ul li .numero.active {
+  background-color: #bcc8e2;
+}
+
+#sedes-react-component ul li .numero span {
+  position: absolute;
+  left: 7px;
+  top: 0px;
+  color: #bcc8e2;
+}
+
+#sedes-react-component ul li .numero svg {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  color: #bcc8e2;
+}
+
+#sedes-react-component ul li .numero.active span {
+  position: absolute;
+  color: #dfdb95;
+}
+
+#sedes-react-component ul li .texto.active {
+  font-weight: 600;
+}
+
+#sedes-react-component .cotizador .nav-pills .nav-link {
+  border: 0;
+  background-color: #dee4f0;
+
+  border-radius: 8px;
+}
+
+#sedes-react-component .cotizador .nav-pills .nav-link.active,
+#sedes-react-component .cotizador .nav-pills .show > .nav-link {
+  background-color: #f2f4f9;
+
+  border-radius: 8px;
+}
+
+#sedes-react-component .cotizador .nav-pills .nav-link.cotizador {
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#sedes-react-component .cotizador .check-cotizador {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  opacity: 0;
+}
+
+#sedes-react-component .cotizador .nav-item.active .check-cotizador {
+  opacity: 1;
+}
+
+#sedes-react-component .nav-btns.nav-pills .nav-link {
+  border: 0;
+  background-color: #dee4f0;
+  color: #7a92c5;
+  border-radius: 8px;
+  width: 195px;
+}
+
+#sedes-react-component .nav-btns.nav-pills .nav-link.active,
+#sedes-react-component .nav-btns.nav-pills .show > .nav-link {
+  color: #7a92c5;
+  background-color: #f2f4f9;
+  border: 1px solid #7a92c5;
+  border-radius: 8px;
+}
+
+#sedes-react-component .nav-btns.nav-pills .nav-link {
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#sedes-react-component .nav-btns .check-cotizador {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  opacity: 0;
+}
+
+#sedes-react-component .nav-btns .nav-item.active .check-cotizador {
+  opacity: 1;
+}
+
+#sedes-react-component .nav-perfil.nav-pills .nav-link {
+  border: 0;
+  background-color: #ffffff;
+  color: #7a92c5;
+  font-weight: 400;
+}
+
+#sedes-react-component .nav-perfil.nav-pills .nav-link.active,
+#sedes-react-component .nav-btns.nav-pills .show > .nav-link {
+  font-weight: 700;
+}
+
+#sedes-react-component .form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.25em;
+  vertical-align: top;
+  justify-content: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #7a92c5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#sedes-react-component .form-check-input:checked {
+  background-color: #c57a7a !important;
+  border-color: #7a92c5 !important;
+}
+
+#sedes-react-component .italic {
+  font-style: oblique;
+}
+
+#sedes-react-component .thin {
+  font-weight: 100;
+}
+
+#sedes-react-component .xlight {
+  font-weight: 200;
+}
+
+#sedes-react-component .light {
+  font-weight: 300;
+}
+
+#sedes-react-component .regular {
+  font-weight: 400;
+}
+
+#sedes-react-component .medium {
+  font-weight: 500;
+}
+
+#sedes-react-component .book {
+  font-weight: 600;
+}
+
+#sedes-react-component .bold {
+  font-weight: 700;
+}
+
+#sedes-react-component .xbold {
+  font-weight: 800;
+}
+
+#sedes-react-component .black {
+  font-weight: 900;
+}
+
+@media (max-width: 576px) {
+  #sedes-react-component.section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  #sedes-react-component.logo-head {
+    max-height: 28px;
+  }
+
+  #sedes-react-component.nav-item.button {
+    width: 100%;
+  }
+
+  #sedes-react-component.nav-item.button .btn {
+    width: 100%;
+  }
+
+  #sedes-react-component.text-small {
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+  }
+
+  #sedes-react-component.text-normal {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  #sedes-react-component.text-normal-dos {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  #sedes-react-component .text-big {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  #sedes-react-component .text-ultra-big {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  #sedes-react-component .w-50.form {
+    width: 80% !important;
+  }
+
+  #sedes-react-component .avion-arriba {
+    display: none;
+  }
+
+  #sedes-react-component .avion-abajo {
+    display: none;
+  }
+
+  #sedes-react-component .imagen-evento {
+    aspect-ratio: 1/0.8;
+  }
+
+  #sedes-react-component .offcanvas-body {
+    background-color: var(--dark);
+  }
+
+  #mainNav {
+    background-color: var(--dark);
+  }
+
+  #sedes-react-component .offcanvas-end {
+    max-width: 320px;
+  }
+
+  #sedes-react-component .w-25 {
+    width: 100% !important;
+  }
+
+  #sedes-react-component .text-serv {
+    position: inherit;
+    bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #sedes-react-component ul li .texto {
+    display: none;
+  }
+
+  #sedes-react-component .cotizador .nav {
+    display: flex;
+    flex-wrap: inherit;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    overflow: scroll;
+  }
+
+  #sedes-react-component .cotizador .nav-link {
+    min-width: 140px;
+  }
+
+  #sedes-react-component .btn-block {
+    width: 100%;
+  }
+
+  #sedes-react-component .nav-btns.nav-pills .nav-link {
+    width: 140px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  #sedes-react-component .text-small {
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+  }
+
+  #sedes-react-component .text-normal {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #sedes-react-component .text-normal-dos {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  #sedes-react-component .text-big {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+
+  #sedes-react-component .text-ultra-big {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  #sedes-react-component .text-parallax {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #sedes-react-component .text-small {
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+  }
+
+  #sedes-react-component .text-normal {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #sedes-react-component .text-normal-dos {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  #sedes-react-component .text-big {
+    font-size: 2.8rem;
+    line-height: 3.1rem;
+  }
+
+  #sedes-react-component .text-ultra-big {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #sedes-react-component .text-small {
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+  }
+
+  #sedes-react-component .text-normal {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #sedes-react-component .text-normal-dos {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  #sedes-react-component .text-big {
+    font-size: 2.8rem;
+    line-height: 3.1rem;
+  }
+
+  #sedes-react-component .text-ultra-big {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #sedes-react-component .text-small {
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+  }
+
+  #sedes-react-component .text-normal {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #sedes-react-component .text-normal-dos {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  #sedes-react-component .text-big {
+    font-size: 2.8rem;
+    line-height: 3.1rem;
+  }
+
+  #sedes-react-component .text-ultra-big {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1600px) {
+  #sedes-react-component .text-small {
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+  }
+
+  #sedes-react-component .text-normal {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #sedes-react-component .text-normal-dos {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  #sedes-react-component .text-big {
+    font-size: 2.8rem;
+    line-height: 3.1rem;
+  }
+
+  #sedes-react-component .text-ultra-big {
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+  }
+
+  #sedes-react-component .text-parallax {
+    width: 50%;
+  }
+}
+
+#sedes-react-component .label-container {
+  position: fixed;
+  bottom: 48px;
+  right: 105px;
+  display: table;
+  visibility: hidden;
+}
+
+#sedes-react-component .label-container-borrar {
+  position: fixed;
+  bottom: 118px;
+  right: 105px;
+  display: table;
+  visibility: hidden;
+}
+
+#sedes-react-component .label-text {
+  color: #fff;
+  background: rgba(51, 51, 51, 0.5);
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+#sedes-react-component .label-arrow {
+  display: table-cell;
+  vertical-align: middle;
+  color: #333;
+  opacity: 0.5;
+}
+
+#sedes-react-component a#menu-share:active {
+  opacity: 0.75;
+}
+
+#sedes-react-component a#menu-share:hover > i {
+  animation: rotate-out 0.5s;
+}
+
+#sedes-react-component a#menu-share i {
+  animation: rotate-in 0.5s;
+}
+
+#sedes-react-component a#menu-share:hover > img {
+  animation: rotate-out 0.5s;
+}
+
+#sedes-react-component a#menu-share img {
+  animation: rotate-in 0.5s;
+}
+
+#sedes-react-component a#logo:hover > #potenc {
+  animation: rotate-in 0.5s;
+}
+
+#sedes-react-component a#logo #potenc {
+  animation: rotate-out 0.5s;
+}
+
+@keyframes bot-to-top {
+  0% {
+    bottom: -40px;
+  }
+  50% {
+    bottom: 40px;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate-in {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-out {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

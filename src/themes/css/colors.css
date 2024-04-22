@@ -1,0 +1,721 @@
+:root {
+  --primary: #a6192e;
+  --primary-dos: #e65369;
+  --primary-tres: #ed8696;
+  --primary-cuatro: #f3bac2;
+  --primary-cinco: #ffebf0;
+  --primary-focus: #e65369;
+
+  --secondary: #c9c44b;
+  --secondary-dos: #dfdb95;
+  --secondary-tres: #ece9be;
+  --secondary-focus: #dfdb95;
+
+  --dark: #7b7b7b;
+  --dark-dos: #424242;
+  --dark-tres: #616161;
+
+  --light: #eeeeee;
+  --light-dos: #e0e0e0;
+  --light-tres: #bdbdbd;
+
+  --white: #ffffff;
+  --white-dos: #fdfdfd;
+
+  --black: #000000;
+  --black-dos: #424242;
+
+  --success: #8bb438;
+  --success-dos: #8cd866;
+
+  --progress: #026cc4;
+  --progress-dos: #029ee4;
+
+  --warning: #e22822;
+  --warning-dos: #dee4f0;
+
+  --danger: #e22822;
+  --danger-dos: #cc0472;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  padding: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#sedes-react-component .modal-body::-webkit-scrollbar-track {
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+  border-radius: 12px;
+  background-color: var(--dark);
+}
+
+#sedes-react-component .modal-body::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--dark);
+  padding: 3px;
+}
+
+#sedes-react-component .modal-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--primary);
+  border: 3px solid var(--dark);
+}
+
+#sedes-react-component .btn-check:focus + .btn,
+#sedes-react-component .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--primary-focus) !important;
+}
+
+#sedes-react-component .form-control::placeholder {
+  color: var(--warning) !important;
+}
+
+#sedes-react-component .form-select {
+  color: var(--warning) !important;
+}
+
+#sedes-react-component .form-select option {
+  color: #757575 !important;
+}
+
+#sedes-react-component .btn-check:active + .btn-primary,
+#sedes-react-component .btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: var(--primary-dos);
+  border-color: var(--primary-dos);
+}
+
+/* Color Danger */
+
+/* Pega esto en tu archivo CSS */
+
+#sedes-react-component .text-danger {
+  color: var(--danger) !important;
+}
+
+#sedes-react-component .bg-danger {
+  background-color: var(--danger) !important;
+}
+
+#sedes-react-component .border-danger {
+  border-color: var(--danger) !important;
+}
+
+#sedes-react-component .btn-outline-danger {
+  color: var(--danger) !important;
+  border-color: var(--danger) !important;
+}
+#sedes-react-component .btn-outline-danger:hover {
+  color: var(--white) !important;
+  background-color: var(--danger) !important;
+  border-color: #757575 !important;
+}
+#sedes-react-component .btn-check:focus + .btn-outline-danger,
+#sedes-react-component .btn-outline-danger:focus {
+  box-shadow: 0 0 0 0.25rem var(--danger-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-danger,
+#sedes-react-component .btn-check:active + .btn-outline-danger,
+#sedes-react-component .btn-outline-danger:active,
+#sedes-react-component .btn-outline-danger.active,
+#sedes-react-component .btn-outline-danger.dropdown-toggle.show {
+  color: var(--white) !important;
+  background-color: var(--danger) !important;
+  border-color: var(--danger) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-danger:focus,
+#sedes-react-component .btn-check:active + .btn-outline-danger:focus,
+#sedes-react-component .btn-outline-danger:active:focus,
+#sedes-react-component .btn-outline-danger.active:focus,
+#sedes-react-component .btn-outline-danger.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem var(--danger-dos) !important;
+}
+#sedes-react-component .btn-outline-danger:disabled,
+#sedes-react-component .btn-outline-danger.disabled {
+  color: var(--danger) !important;
+  background-color: transparent;
+}
+
+#sedes-react-component .btn-danger {
+  color: var(--white) !important;
+  background-color: var(--danger) !important;
+  border-color: var(--danger) !important;
+}
+#sedes-react-component .btn-danger:hover {
+  color: var(--white) !important;
+  background-color: var(--danger-dos) !important;
+  border-color: var(--danger-dos) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-danger,
+#sedes-react-component .btn-danger:focus {
+  color: var(--white) !important;
+  background-color: var(--danger-dos) !important;
+  border-color: var(--danger-dos) !important;
+  box-shadow: 0 0 0 0.25rem var(--danger-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-danger,
+#sedes-react-component .btn-check:active + .btn-danger,
+#sedes-react-component .btn-danger:active,
+#sedes-react-component .btn-danger.active,
+#sedes-react-component .show > .btn-danger.dropdown-toggle {
+  color: var(--white) !important;
+  background-color: var(--danger-dos) !important;
+  border-color: var(--danger-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-danger:focus,
+#sedes-react-component .btn-check:active + .btn-danger:focus,
+#sedes-react-component .btn-danger:active:focus,
+#sedes-react-component .btn-danger.active:focus,
+#sedes-react-component .show > .btn-danger.dropdown-toggle:focus {
+  box-shadow: 0;
+}
+
+/* Color White */
+
+#sedes-react-component .text-white {
+  color: var(--white) !important;
+}
+
+#sedes-react-component .bg-white {
+  background-color: var(--white) !important;
+}
+
+#sedes-react-component .border-white {
+  border-color: var(--white) !important;
+}
+
+#sedes-react-component .btn-outline-white {
+  color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+#sedes-react-component .btn-outline-white:hover {
+  color: var(--dark) !important;
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-outline-white,
+#sedes-react-component .btn-outline-white:focus {
+  box-shadow: 0 0 0 0.25rem var(--light) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-white,
+#sedes-react-component .btn-check:active + .btn-outline-white,
+#sedes-react-component .btn-outline-white:active,
+#sedes-react-component .btn-outline-white.active,
+#sedes-react-component .show > .btn-outline-white.dropdown-toggle {
+  color: var(--dark) !important;
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-white:focus,
+#sedes-react-component .btn-check:active + .btn-outline-white:focus,
+#sedes-react-component .btn-outline-white:active:focus,
+#sedes-react-component .btn-outline-white.active:focus,
+#sedes-react-component .show > .btn-outline-white.dropdown-toggle.focus {
+  box-shadow: 0 0 0 0.25rem var(--light) !important;
+}
+#sedes-react-component .btn-outline-white:disabled,
+#sedes-react-component .btn-outline-white.disabled {
+  color: var(--white) !important;
+  background-color: transparent;
+}
+
+#sedes-react-component .btn-white {
+  color: var(--dark) !important;
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+#sedes-react-component .btn-white:hover {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-white,
+#sedes-react-component .btn-white:focus {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+  box-shadow: 0 0 0 0.25rem var(--light) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-white,
+#sedes-react-component .btn-check:active + .btn-white,
+#sedes-react-component .btn-white:active,
+#sedes-react-component .btn-white.active,
+#sedes-react-component .show > .btn-white.dropdown-toggle {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-white:focus,
+#sedes-react-component .btn-check:active + .btn-white:focus,
+#sedes-react-component .btn-white:active:focus,
+#sedes-react-component .btn-white.active:focus,
+#sedes-react-component .show > .btn-white.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem var(--light) !important;
+}
+#sedes-react-component .btn-white:disabled,
+#sedes-react-component .btn-white.disabled {
+  color: var(--dark) !important;
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+
+#sedes-react-component .border-white {
+  border-color: var(--white) !important;
+}
+
+/* Color Black */
+
+#sedes-react-component .text-black {
+  color: var(--black) !important;
+}
+
+#sedes-react-component .bg-black {
+  background-color: var(--black) !important;
+}
+
+#sedes-react-component .border-black {
+  border-color: var(--black) !important;
+}
+
+#sedes-react-component .btn-outline-black {
+  color: var(--black) !important;
+  border-color: var(--black) !important;
+}
+#sedes-react-component .btn-outline-black:hover {
+  color: var(--white) !important;
+  background-color: var(--black) !important;
+  border-color: var(--black) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-outline-black,
+#sedes-react-component .btn-outline-black:focus {
+  box-shadow: 0 0 0 0.25rem var(--light) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-black,
+#sedes-react-component .btn-check:active + .btn-outline-black,
+#sedes-react-component .btn-outline-black:active,
+#sedes-react-component .btn-outline-black.active,
+#sedes-react-component .btn-outline-black.dropdown-toggle.show {
+  color: var(--white) !important;
+  background-color: var(--black) !important;
+  border-color: var(--black) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-black:focus,
+#sedes-react-component .btn-check:active + .btn-outline-black:focus,
+#sedes-react-component .btn-outline-black:active:focus,
+#sedes-react-component .btn-outline-black.active:focus,
+#sedes-react-component .btn-outline-white.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem var(--light) !important;
+}
+#sedes-react-component .btn-outline-black:disabled,
+#sedes-react-component .btn-outline-black.disabled {
+  color: var(--black) !important;
+  background-color: transparent;
+}
+
+#sedes-react-component .btn-black {
+  color: var(--white) !important;
+  background-color: var(--black) !important;
+  border-color: var(--black) !important;
+}
+#sedes-react-component .btn-black:hover {
+  color: var(--black) !important;
+  background-color: var(--white) !important;
+  border-color: var(--black) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-black,
+#sedes-react-component .btn-black:focus {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+  box-shadow: 0 0 0 0.25rem var(--light) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-black,
+#sedes-react-component .btn-check:active + .btn-black,
+#sedes-react-component .btn-black:active,
+#sedes-react-component .btn-black.active,
+#sedes-react-component .show > .btn-black.dropdown-toggle {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-black:focus,
+#sedes-react-component .btn-check:active + .btn-black:focus,
+#sedes-react-component .btn-black:active:focus,
+#sedes-react-component .btn-black.active:focus,
+#sedes-react-component .show > .btn-black.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem var(--light) !important;
+}
+#sedes-react-component .btn-black:disabled,
+#sedes-react-component .btn-black.disabled {
+  color: var(--white) !important;
+  background-color: var(--black) !important;
+  border-color: var(--black) !important;
+}
+
+#sedes-react-component .border-black {
+  border-color: var(--black) !important;
+}
+
+/* Color Light */
+
+#sedes-react-component .text-light {
+  color: var(--light) !important;
+}
+
+#sedes-react-component .bg-light {
+  background-color: var(--light) !important;
+}
+
+#sedes-react-component .border-light {
+  border-color: var(--light) !important;
+}
+
+#sedes-react-component .btn-outline-light {
+  color: var(--white) !important;
+  border-color: var(--light) !important;
+}
+#sedes-react-component .btn-outline-light:hover {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-outline-light,
+#sedes-react-component .btn-outline-light:focus {
+  box-shadow: 0 0 0 0.25rem var(--light-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-light,
+#sedes-react-component .btn-check:active + .btn-outline-whlightite,
+#sedes-react-component .btn-outline-light:active,
+#sedes-react-component .btn-outline-light.active,
+#sedes-react-component .btn-outline-light.dropdown-toggle.show {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-light:focus,
+#sedes-react-component .btn-check:active + .btn-outline-light:focus,
+#sedes-react-component .btn-outline-light:active:focus,
+#sedes-react-component .btn-outline-light.active:focus,
+#sedes-react-component .btn-outline-light.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem var(--light-dos) !important;
+}
+#sedes-react-component .btn-outline-light:disabled,
+#sedes-react-component .btn-outline-light.disabled {
+  color: var(--light) !important;
+  background-color: transparent;
+}
+
+#sedes-react-component .btn-light {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+}
+#sedes-react-component .btn-light:hover {
+  color: var(--dark) !important;
+  background-color: var(--light-dos) !important;
+  border-color: var(--light-dos) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-light,
+#sedes-react-component .btn-light:focus {
+  color: var(--dark) !important;
+  background-color: var(--light-dos) !important;
+  border-color: var(--light-dos) !important;
+  box-shadow: 0 0 0 0.25rem var(--light-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-light,
+#sedes-react-component .btn-check:active + .btn-light,
+#sedes-react-component .btn-light:active,
+#sedes-react-component .btn-light.active,
+#sedes-react-component .show > .btn-light.dropdown-toggle {
+  color: var(--dark) !important;
+  background-color: var(--light-dos) !important;
+  border-color: var(--light-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-light:focus,
+#sedes-react-component .btn-check:active + .btn-light:focus,
+#sedes-react-component .btn-light:active:focus,
+#sedes-react-component .btn-light.active:focus,
+#sedes-react-component .show > .btn-light.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem var(--light-dos) !important;
+}
+#sedes-react-component .btn-light:disabled,
+#sedes-react-component .btn-light.disabled {
+  color: var(--dark) !important;
+  background-color: var(--light) !important;
+  border-color: var(--light) !important;
+}
+
+#sedes-react-component .border-light {
+  border-color: var(--light) !important;
+}
+
+/* Color Dark */
+
+#sedes-react-component .text-dark {
+  color: var(--gray) !important;
+}
+
+#sedes-react-component .bg-dark {
+  background-color: var(--dark) !important;
+}
+
+#sedes-react-component .border-dark {
+  border-color: #757575 !important;
+}
+
+#sedes-react-component .btn-outline-dark {
+  color: var(--dark) !important;
+  border-color: var(--dark) !important;
+}
+#sedes-react-component #sedes-react-component .btn-outline-dark:hover {
+  color: var(--white) !important;
+  background-color: var(--dark) !important;
+  border-color: var(--dark) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-outline-dark,
+#sedes-react-component .btn-outline-dark:focus {
+  box-shadow: 0 0 0 0.25rem var(--dark-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-dark,
+#sedes-react-component .btn-check:active + .btn-outline-dark,
+#sedes-react-component .btn-outline-dark:active,
+#sedes-react-component .btn-outline-dark.active,
+#sedes-react-component .btn-outline-dark.dropdown-toggle.show {
+  color: var(--white) !important;
+  background-color: var(--dark) !important;
+  border-color: var(--dark) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-dark:focus,
+#sedes-react-component .btn-check:active + .btn-outline-dark:focus,
+#sedes-react-component .btn-outline-dark:active:focus,
+#sedes-react-component .btn-outline-dark.active:focus,
+#sedes-react-component .btn-outline-dark.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem var(--dark-dos) !important;
+}
+#sedes-react-component .btn-outline-dark:disabled,
+#sedes-react-component .btn-outline-dark.disabled {
+  color: var(--dark) !important;
+  background-color: transparent;
+}
+
+#sedes-react-component .btn-dark {
+  color: var(--white) !important;
+  background-color: var(--dark) !important;
+  border-color: var(--dark) !important;
+}
+#sedes-react-component .btn-dark:hover {
+  color: var(--white) !important;
+  background-color: var(--dark-dos) !important;
+  border-color: var(--dark-dos) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-dark,
+#sedes-react-component .btn-dark:focus {
+  color: var(--white) !important;
+  background-color: var(--dark-dos) !important;
+  border-color: var(--dark-dos) !important;
+  box-shadow: 0 0 0 0.25remvar (--dark-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-dark,
+#sedes-react-component .btn-check:active + .btn-dark,
+#sedes-react-component .btn-dark:active,
+#sedes-react-component .btn-dark.active,
+#sedes-react-component .show > .btn-dark.dropdown-toggle {
+  color: var(--white) !important;
+  background-color: var(--dark-dos) !important;
+  border-color: var(--dark-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-dark:focus,
+#sedes-react-component .btn-check:active + .btn-dark:focus,
+#sedes-react-component .btn-dark:active:focus,
+#sedes-react-component .btn-dark.active:focus,
+#sedes-react-component .show > .btn-dark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25remvar (--dark-dos) !important;
+}
+#sedes-react-component .btn-dark:disabled,
+#sedes-react-component .btn-dark.disabled {
+  color: var(--white) !important;
+  background-color: var(--dark) !important;
+  border-color: var(--dark) !important;
+}
+
+#sedes-react-component .border-dark {
+  border-color: #757575 !important;
+}
+
+/* Color Primary */
+
+#sedes-react-component .text-primary {
+  color: var(--primary) !important;
+}
+
+#sedes-react-component .hover:hover {
+  color: var(--primary) !important;
+}
+
+#sedes-react-component .bg-primary {
+  background-color: var(--primary) !important;
+}
+
+#sedes-react-component .border-primary {
+  border-color: var(--primary) !important;
+}
+
+#sedes-react-component .border-primary-tres {
+  border: 3px solid var(--primary) !important;
+}
+
+#sedes-react-component .btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+#sedes-react-component .btn-outline-primary:hover {
+  color: var(--white) !important;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+#sedes-react-component .btn-check:focus + .btn-outline-primary,
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.25rem var(--primary-dos);
+}
+#sedes-react-component .btn-check:checked + .btn-outline-primary,
+#sedes-react-component .btn-check:active + .btn-outline-primary,
+#sedes-react-component .btn-outline-primary:active,
+#sedes-react-component .btn-outline-primary.active,
+#sedes-react-component .btn-outline-primary.dropdown-toggle.show {
+  color: var(--white) !important;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+#sedes-react-component .btn-check:checked + .btn-outline-primary:focus,
+#sedes-react-component .btn-check:active + .btn-outline-primary:focus,
+#sedes-react-component .btn-outline-primary:active:focus,
+#sedes-react-component .btn-outline-primary.active:focus,
+#sedes-react-component .btn-outline-primary.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem var(--primary-dos);
+}
+#sedes-react-component .btn-outline-primary:disabled,
+#sedes-react-component .btn-outline-primary.disabled {
+  color: var(--primary);
+  background-color: transparent;
+}
+
+#sedes-react-component .btn-primary {
+  color: var(--white) !important;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+#sedes-react-component .btn-primary:hover {
+  color: var(--white) !important;
+  background-color: var(--primary-dos);
+  border-color: var(--primary-dos);
+}
+#sedes-react-component .btn-check:focus + .btn-primary,
+#sedes-react-component .btn-primary:focus {
+  color: #fff;
+  background-color: var(--primary-dos) !important;
+  border-color: var(--primary-dos) !important;
+  box-shadow: 0 0 0 0.25rem var(--primary-dos) !important;
+}
+
+/* Color Secondary */
+
+#sedes-react-component .text-secondary {
+  color: var(--secondary) !important;
+}
+
+#sedes-react-component .bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+#sedes-react-component .border-secondary {
+  border-color: var(--secondary) !important;
+}
+
+#sedes-react-component .btn-outline-secondary {
+  color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+#sedes-react-component .btn-outline-secondary:hover {
+  color: var(--white) !important;
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-outline-secondary,
+#sedes-react-component .btn-outline-secondary:focus {
+  box-shadow: 0 0 0 0.25rem var(--secondary) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-secondary,
+#sedes-react-component .btn-check:active + .btn-outline-secondary,
+#sedes-react-component .btn-outline-secondary:active,
+#sedes-react-component .btn-outline-secondary.active,
+#sedes-react-component .btn-outline-secondary.dropdown-toggle.show {
+  color: var(--white) !important;
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-outline-secondary:focus,
+#sedes-react-component .btn-check:active + .btn-outline-secondary:focus,
+#sedes-react-component .btn-outline-secondary:active:focus,
+#sedes-react-component .btn-outline-secondary.active:focus,
+#sedes-react-component .btn-outline-secondary.dropdown-toggle.show:focus {
+  box-shadow: 0 0 0 0.25rem var(--secondary-dos) !important;
+}
+#sedes-react-component .btn-outline-secondary:disabled,
+#sedes-react-component .btn-outline-secondary.disabled {
+  color: var(--secondary) !important;
+  background-color: transparent;
+}
+
+#sedes-react-component .btn-secondary {
+  color: var(--white) !important;
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+#sedes-react-component .btn-secondary:hover {
+  color: var(--white) !important;
+  background-color: var(--secondary-dos) !important;
+  border-color: var(--secondary-dos) !important;
+}
+#sedes-react-component .btn-check:focus + .btn-secondary,
+#sedes-react-component .btn-secondary:focus {
+  color: var(--white) !important;
+  background-color: var(--secondary-dos) !important;
+  border-color: var(--secondary-dos) !important;
+  box-shadow: 0 0 0 0.25rem var(--secondary-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-secondary,
+#sedes-react-component .btn-check:active + .btn-secondary,
+#sedes-react-component .btn-secondary:active,
+#sedes-react-component .btn-secondary.active,
+#sedes-react-component .show > .btn-secondary.dropdown-toggle {
+  color: var(--white) !important;
+  background-color: var(--secondary-dos) !important;
+  border-color: var(--secondary-dos) !important;
+}
+#sedes-react-component .btn-check:checked + .btn-secondary:focus,
+#sedes-react-component .btn-check:active + .btn-secondary:focus,
+#sedes-react-component .btn-secondary:active:focus,
+#sedes-react-component .btn-secondary.active:focus,
+#sedes-react-component .show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem var(--secondary-dos) !important;
+}
+#sedes-react-component .btn-secondary:disabled,
+#sedes-react-component .btn-secondary.disabled {
+  color: var(--white) !important;
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+
+#sedes-react-component .border-secondary {
+  border-color: var(--secondary) !important;
+}
