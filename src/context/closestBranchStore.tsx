@@ -33,21 +33,14 @@ export type StateSedes = {
     rendered: string;
     protected: boolean;
   };
-  acf?: acf;
-  excerpt?: excerpt;
-  branchesWithCoordinates: BranchWithCoordinates[] | null;
-  actualLocation: {
-    lat: number;
-    lng: number;
-  };
-  closestBranch: BranchWithCoordinates | null;
+
   setTitle: (title: { rendered: string }) => void;
   setContent: (content: { rendered: string; protected: boolean }) => void;
-  setAcf: (acf: acf) => void;
+
   setExcerpt: (excerpt: excerpt) => void;
-  setBranchesWithCoordinates: (branch: BranchWithCoordinates[]) => void;
+
   setActualLocation: (branch: { lat: number; lng: number }) => void;
-  setClosestBranch: (branch: BranchWithCoordinates | null) => void;
+
   isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
 };

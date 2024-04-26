@@ -1,31 +1,54 @@
-# Tech stack: React + TypeScript + Vite
+# Google Maps component for Montepío Luz Saviñón
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un componente React personalizado, fue creado para ser integrado en un sitio Wordpress.
 
-Currently, two official plugins are available:
+El componente utiliza diferentes funcionalidades obtenidas del servicio de [Google maps API](https://developers.google.com/maps/documentation). Fue pensado para integrarse en un sitio Wordpress, con la finalidad de mostrar las tiendas "Montepío Luz Saviñón" cercanas al usuario.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+#### **Installation**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+npm install or pnpm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# Maps-Component
+## Estructura del proyecto
+
+Estructura del proyecto con los modulos principales.
+
+* `src/`
+
+  * `assets/`: Carpeta para recursos (fonts/images)
+  * `components/`: Carpeta de componentes personalizados.
+  * `components/Sedes`: Capeta donde componentes relacionados al mapa.
+
+    * `Google.tsx`: Componente principal donde se hacer render el mapa.
+    * `initMap.tsx`: Function async que inicializa el mapa.
+    * `MapComponent.tsx`: Componente wrapper.
+    * `Marker.tsx`: Contiene customs markers usados en el mapa.
+    * `SedesCounter.tsx`: Contador de sedes.
+    * `MapItems/`: Carpeta de componentes funcionales del mapa.
+      * `CreateMarker.tsx`: hace render de un AdvancedMarkerElement de Gmaps api.
+      * `SearchBar.tsx`: Barra de busqueda por direccion o codigo postal.
+    * `HeaderSede/`
+      * `HeaderSede.tsx`: Render del titulo definido desde wordpress.
+  * `utils/`: Carpeta para funciones de utilidad.
+  * `hooks/`: Custom hook folder.
+  * `types/`: Custom interfaces/types declarados para Typescript.
+  * `App.js`: Punto de entrada de la aplicación.
+
+    Estructura del proyecto con los modulos principales.
+
+## Funcionalidades
+
+* Consulta Geolocación al usuario para buscar las sucursales cercanas segun su ubicacion actual.
+  ```
+  //Por default la ubicacion será de Ciudad de México.
+  const defaultLocation = { lat: 19.43534430248748, lng: -99.13470289762083 };
+  ```
+* Búsqueda de Tiendas: Implementa una barra de búsqueda para que los usuarios encuentren tiendas cercanas en México, buscando por:
+  * Dirección.
+  * Código postal.
+  * Ciudad/Localidad/Pueblo/ect...
+* Marcadores Personalizados: Agrega marcadores para cada tienda en el mapa. Ademas si es seleccionado, se mostrara un "popup" mostrando el nombre, direccion completa y un link de redireccion hacia la plataforma de Google Maps con dicha direccion marcada.
+* Información Detallada: Muestra detalles relevantes de las tiendas al hacer clic en los marcadores.

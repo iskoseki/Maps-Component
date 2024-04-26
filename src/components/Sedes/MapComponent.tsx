@@ -1,13 +1,13 @@
 import React, { Suspense } from "react";
 import { ActionsButtons } from "./ActionsButtosSedes";
 import Loading from "../Loading";
-import SelectorSedes from "./SelectorSede/SelectorSedes";
+import HeaderSedes from "./HeaderSede/HeaderSedes";
 import Google from "./Google";
 
 const MapComponent: React.FC = () => {
   return (
     <section id="mapaContainer" className="p-[16px]">
-      <SelectorSedes />
+      <HeaderSedes />
       <div className="mb-4">
         <Suspense fallback={<Loading />}>
           <Google />

@@ -2,7 +2,7 @@ import React from "react";
 import { useFetch } from "../../../hooks/useFetch";
 import { StateSedes } from "../../../context/closestBranchStore";
 
-export default function SelectorSedes() {
+export default function HeaderSedes() {
   const { data } = useFetch<StateSedes>(
     "https://bgwp.bgroup.com.ar/wp-json/wp/v2/pages/63"
   );
