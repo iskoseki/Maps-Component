@@ -6,10 +6,22 @@ El componente utiliza diferentes funcionalidades obtenidas del servicio de [Goog
 
 ---
 
+
+
 #### **Installation**
 
 ```
-npm install or pnpm install
+npm install 
+or 
+pnpm install
+```
+
+Para que el mapa funcione, tambien se encesita un API KEY brindada en la panel de google maps. El proyecto aloja la KEY en un archivo `.env` (El archivo se encuentra en el root folder.)
+
+Para agregar/editar una Clave validad modificar el archivo `.env` y modificar la variable "VITE_GOOGLEKEY".
+
+```
+VITE_GOOGLEKEY=AquiVaSuKEY
 ```
 
 ## Estructura del proyecto
@@ -52,3 +64,12 @@ Estructura del proyecto con los modulos principales.
   * Ciudad/Localidad/Pueblo/ect...
 * Marcadores Personalizados: Agrega marcadores para cada tienda en el mapa. Ademas si es seleccionado, se mostrara un "popup" mostrando el nombre, direccion completa y un link de redireccion hacia la plataforma de Google Maps con dicha direccion marcada.
 * Información Detallada: Muestra detalles relevantes de las tiendas al hacer clic en los marcadores.
+
+
+## Util links & resources
+
+[Maps JavaScript API ](https://developers.google.com/maps/documentation/javascript)
+
+[react-geocode](https://www.npmjs.com/package/react-geocode)
+
+[use-places-autocomplete](https://www.npmjs.com/package/use-places-autocomplete)
