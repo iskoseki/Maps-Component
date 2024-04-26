@@ -62,8 +62,8 @@ Estructura del proyecto con los modulos principales.
   * Dirección.
   * Código postal.
   * Ciudad/Localidad/Pueblo/ect...
-* Marcadores Personalizados: Agrega marcadores para cada tienda en el mapa. Ademas si es seleccionado, se mostrara un "popup" mostrando el nombre, direccion completa y un link de redireccion hacia la plataforma de Google Maps con dicha direccion marcada.
-* Información Detallada: Muestra detalles relevantes de las tiendas al hacer clic en los marcadores.
+* Marcadores Personalizados: Agrega marcadores para cada tienda en el mapa.
+* Información Detallada: Muestra detalles relevantes de las tiendas al hacer clic en los marcadores. (Nombre, Direccion, link de re-direct a google maps)
 
 
 ## Util links & resources
