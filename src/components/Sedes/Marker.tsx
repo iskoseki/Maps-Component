@@ -7,6 +7,10 @@ export const CustomMarkerIcon = L.divIcon({
 `,
   iconSize: [38, 95],
   iconAnchor: [16, 16],
+  shadowUrl: "https://leafletjs.com/examples/custom-icons/leaf-shadow.png",
+  shadowSize: [50, 64],
+  shadowAnchor: [4, 62],
+  popupAnchor: [0, 0],
 });
 export const ActualLocationMarkerIcon = L.divIcon({
   className: "custom-icon",

@@ -2,18 +2,18 @@ import React, { Suspense } from "react";
 import { ActionsButtons } from "./ActionsButtosSedes";
 import Loading from "../Loading";
 import HeaderSedes from "./HeaderSede/HeaderSedes";
-import Google from "./Google";
+import BranchMap from "../BranchMap";
 
 const MapComponent: React.FC = () => {
   return (
     <section id="mapaContainer" className="p-[16px]">
-      <HeaderSedes />
-      <div className="mb-4">
-        <Suspense fallback={<Loading />}>
-          <Google />
-        </Suspense>
-      </div>
-      <ActionsButtons />
+      <Suspense fallback={<Loading />}>
+        <HeaderSedes />
+        <div className="mb-4">
+          <BranchMap />
+        </div>
+        <ActionsButtons />
+      </Suspense>
     </section>
   );
 };

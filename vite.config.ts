@@ -11,7 +11,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '')
       },
       '/montepio': {
-        target: 'http://montepio.whileam.com.ar',
+        target: 'https://bgwp.bgroup.com.ar/',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/montepio/, '')
       },
