@@ -6,9 +6,10 @@ import usePlacesAutocomplete, {
 } from "use-places-autocomplete";
 const googleKey = import.meta.env.VITE_GOOGLEKEY;
 
-setKey(googleKey);
-setRegion("mx");
-setLanguage("es");
+//Options for geocoding
+setKey(googleKey); //API KEY
+setRegion("mx"); //solo mexico
+setLanguage("es"); //lenguaje español
 
 export default function SearchBar({ onLocationChange }) {
   const [search, setSearch] = useState("");
@@ -31,20 +32,20 @@ export default function SearchBar({ onLocationChange }) {
 
   const handleSelect =
     ({ description }) =>
-    () => {
-      setSearch(description);
-      setValue(description, false);
-      clearSuggestions();
+      () => {
+        setSearch(description);
+        setValue(description, false);
+        clearSuggestions();
 
-      getGeocode({ address: description })
-        .then((results) => getLatLng(results[0]))
-        .then(({ lat, lng }) => {
-          onLocationChange({ lat, lng });
-        })
-        .catch((error) => {
-          console.log("😱 Error: ", error.message);
-        });
-    };
+        getGeocode({ address: description })
+          .then((results) => getLatLng(results[0]))
+          .then(({ lat, lng }) => {
+            onLocationChange({ lat, lng });
+          })
+          .catch((error) => {
+            console.log("😱 Error: ", error.message);
+          });
+      };
 
   const renderSuggestions = () =>
     data.map((suggestion) => (
@@ -57,7 +58,6 @@ export default function SearchBar({ onLocationChange }) {
     <form className="search-bar">
       <div className="flex flex-col">
         <div>
-          {" "}
           <input
             value={search}
             className="input-search-map border bg-white  p-2 rounded my-2"

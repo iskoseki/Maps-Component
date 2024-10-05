@@ -39,7 +39,6 @@ const BranchMap = () => {
     ? selectedLocation
     : currentLocation;
 
-  // Validar que displayedLocation no sea undefined
   if (!displayedLocation || !displayedLocation.lat || !displayedLocation.lng) {
     return <div>Esperando ubicación válida...</div>;
   }
@@ -73,7 +72,7 @@ const BranchMap = () => {
         </label>
       </div>
       <MapContainer
-        center={[displayedLocation.lat, displayedLocation.lng]} // Aquí ya no será undefined
+        center={[displayedLocation.lat, displayedLocation.lng]}
         zoom={14}
         style={{ height: "350px", width: "100%", borderRadius: "12px" }}
       >

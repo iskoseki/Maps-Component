@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useUserLocation = () => {
-  const defaultLocation = { lat: 19.4326, lng: -99.1332 }; // Ciudad de México por defecto
+  const defaultLocation = { lat: 19.4326, lng: -99.1332 }; // Ciudad de Mexico por defecto
   const [location, setLocation] = useState(defaultLocation);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null as string | null);
