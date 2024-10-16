@@ -10,6 +10,7 @@ import BranchMapHeader from "./BranchMapHeader";
 import { getClosestStore } from "../../utils/ClosestStore";
 import { calculateDistance } from "../../utils/calculateDistance";
 import { Branch } from "./types/branchMap";
+import ErrorComponent from "../404";
 
 const ClosePopups = React.memo(({ closePopups }: any) => {
   const map = useMap();
@@ -139,15 +140,7 @@ const BranchMap = () => {
       "Ha ocurrido un error al cargar las sucursales. Por favor, intenta de nuevo más tarde.",
       branchesError
     );
-    return (
-      <div className="flex flex-col gap-4 justify-center items-center mt-5 text-sm font-semibold text-[#757575] hover:cursor-pointer">
-        <h3>
-          Ha ocurrido un error al cargar las sucursales. Por favor, intenta de
-          nuevo más tarde.
-        </h3>
-        <p className="italic font-thin">{`{${branchesError}}`}</p>
-      </div>
-    );
+    return <ErrorComponent error={branchesError} />;
   }
 
   return (

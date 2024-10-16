@@ -5,14 +5,18 @@ import { CSSTransition } from "react-transition-group";
 import "./index.css";
 
 export default function HeaderSedes() {
-  const apiUrl = import.meta.env.VITE_API_BASE_URL;
+  //const apiUrl = import.meta.env.VITE_API_BASE_URL;
   const initUrl = import.meta.env.VITE_INIT_URL;
-  const { data } = useFetch<StateSedes>(`${apiUrl}${initUrl}`);
+  const { data } = useFetch<StateSedes>(`${initUrl}`);
   const [show, setShow] = React.useState(false);
 
   React.useEffect(() => {
     setShow(true); // Activar la animación cuando el componente se monta
   }, []);
+
+  if (!data) {
+    return null;
+  }
 
   return (
     <CSSTransition
