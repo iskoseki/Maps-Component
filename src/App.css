@@ -12,22 +12,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* El z-index solo funciona en elementos posicionados */
-  z-index: 1000; /* Un número alto para asegurarte de que esté por encima de otros elementos */
+  left: 0.7%;
+  position: relative;
+
+  z-index: 1000;
 }
 .input-search-map {
-  width: 250px;
+  width: 360px;
+  max-width: 450px !important;
+  min-width: 250px !important;
 }
 .input.search-map:focus {
   outline: none;
-  border: 12px solid #ec0000;
-  box-shadow: 0 0 0 2px #ff0000;
+  border: 12px solid #ec0000 !important;
+  box-shadow: 0 0 0 2px #ff0000 !important;
 }
-@media screen and (max-width: 560px) {
-  .search-bar {
-    justify-content: end;
-  }
+@media screen and (max-width: 1022px) {
   .input-search-map {
-    width: 100%;
+    width: 160px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .input-search-map {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 462px) {
+  .input-search-map {
+    width: 260px !important;
   }
 }

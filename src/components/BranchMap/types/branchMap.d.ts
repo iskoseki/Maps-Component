@@ -1,5 +1,9 @@
 export interface Branch {
+  markerRef?: any;
   id: number;
+  title: {
+    rendered: string;
+  };
   acf: {
     nro_sucursal: string;
     estatus: string;

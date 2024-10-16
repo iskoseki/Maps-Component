@@ -1,0 +1,7 @@
+.outlineBtn {
+  color: #a6192e;
+}
+.outlineBtn:hover {
+  color: #fff !important;
+  background-color: #a6192e;
+}

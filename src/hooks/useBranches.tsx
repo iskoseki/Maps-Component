@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Branch } from "../components/BranchMap/types/branchMap";
 
 // URLs de sucursales por que el api tiene Pagination
+const API_URL = import.meta.env.VITE_API_BASE_URL;
 const { VITE_SUCURSALES_P1, VITE_SUCURSALES_P2, VITE_SUCURSALES_P3 } =
   import.meta.env;
 const API_URLS = [VITE_SUCURSALES_P1, VITE_SUCURSALES_P2, VITE_SUCURSALES_P3];
@@ -23,7 +24,7 @@ const useBranches = () => {
   const fetchBranches = useCallback(async () => {
     try {
       const responses = await Promise.all(
-        API_URLS.map((url) => fetch(`/montepio${url}`))
+        API_URLS.map((url) => fetch(`${API_URL}${url}`))
       );
       const data = await Promise.all(
         responses.map((response) => {
@@ -49,7 +50,7 @@ const useBranches = () => {
   useEffect(() => {
     fetchBranches();
   }, [fetchBranches]);
-  console.log(branches);
+  //console.log(branches);
   return { branches, loading, error };
 };
 

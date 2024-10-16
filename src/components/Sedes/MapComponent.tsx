@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { ActionsButtons } from "./ActionsButtosSedes";
+
 import Loading from "../Loading";
 import HeaderSedes from "./HeaderSede/HeaderSedes";
 import BranchMap from "../BranchMap";
@@ -12,7 +12,6 @@ const MapComponent: React.FC = () => {
         <div className="mb-4">
           <BranchMap />
         </div>
-        <ActionsButtons />
       </Suspense>
     </section>
   );

@@ -13,6 +13,7 @@ setLanguage("es"); //lenguaje español
 
 export default function SearchBar({ onLocationChange }) {
   const [search, setSearch] = useState("");
+
   const {
     ready,
     suggestions: { status, data },
@@ -32,46 +33,52 @@ export default function SearchBar({ onLocationChange }) {
 
   const handleSelect =
     ({ description }) =>
-      () => {
-        setSearch(description);
-        setValue(description, false);
-        clearSuggestions();
+    () => {
+      setSearch(description);
+      setValue(description, false);
+      clearSuggestions();
 
-        getGeocode({ address: description })
-          .then((results) => getLatLng(results[0]))
-          .then(({ lat, lng }) => {
-            onLocationChange({ lat, lng });
-          })
-          .catch((error) => {
-            console.log("😱 Error: ", error.message);
-          });
-      };
+      getGeocode({ address: description })
+        .then((results) => getLatLng(results[0]))
+        .then(({ lat, lng }) => {
+          onLocationChange({ lat, lng });
+        })
+        .catch((error) => {
+          console.log("😱 Error: ", error.message);
+        });
+    };
 
   const renderSuggestions = () =>
     data.map((suggestion) => (
-      <li key={suggestion.place_id} onClick={handleSelect(suggestion)}>
+      <li
+        className="cursor-pointer hover:bg-slate-100 p-1 "
+        key={suggestion.place_id}
+        onClick={handleSelect(suggestion)}
+      >
         {suggestion.description}
       </li>
     ));
 
   return (
-    <form className="search-bar">
-      <div className="flex flex-col">
-        <div>
-          <input
-            value={search}
-            className="input-search-map border bg-white  p-2 rounded my-2"
-            onChange={handleInput}
-            disabled={!ready}
-            placeholder="Busca por direccion o C.P"
-          />
+    <>
+      <form className="search-bar relative rounded-[24px]">
+        <div className="flex flex-col">
+          <div className="w-full">
+            <input
+              value={search}
+              className="input-search-map  border bg-white p-2 rounded-[24px] my-2"
+              onChange={handleInput}
+              disabled={!ready}
+              placeholder="🔍 Busca por direccion o C.P"
+            />
+            {status === "OK" && (
+              <ul className="bg-white absolute p-1 rounded-lg transition-all duration-700 ease-in-out  z-50">
+                {renderSuggestions()}
+              </ul>
+            )}
+          </div>
         </div>
-        {status === "OK" && (
-          <ul className="bg-white p-1 rounded-lg transition-all duration-700 ease-in-out">
-            {renderSuggestions()}
-          </ul>
-        )}
-      </div>
-    </form>
+      </form>
+    </>
   );
 }
